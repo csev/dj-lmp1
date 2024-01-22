@@ -5,6 +5,8 @@ This is the pre-MVP repository for experimentation.  It is designed to serve as 
 There will be no releases and no organized branching / tag strategy.  It is a place to
 incubate and test dj-lmp ideas.
 
+See the [Getting Started](INSTALL.md) documentation
+
 Design Notes
 ============
 
