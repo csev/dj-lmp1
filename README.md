@@ -5,7 +5,23 @@ This is the pre-MVP repository for experimentation.  It is designed to serve as 
 There will be no releases and no organized branching / tag strategy.  It is a place to
 incubate and test dj-lmp ideas.
 
-See the [Getting Started](INSTALL.md) documentation
+Setup
+-----
+
+    git clone https://github.com/csev/dj-lmp1
+    cd dj-lmp1
+    virtualenv .venv
+    source .venv/bin/activate
+    pip install django
+    python -m django --version
+    # Should be 5.0.1
+    cp config/settings-sqlite.py config/settings.py
+
+When you come back in, 
+
+    cd dj-lmp1
+    source .venv/bin/activate
+
 
 Design Notes
 ============
@@ -39,4 +55,9 @@ https://www.slideshare.net/billkarwin/models-for-hierarchical-data
 https://stackoverflow.com/questions/8252323/mysql-closure-table-hierarchical-database-how-to-pull-information-out-in-the-c
 
 Dr. Chuck built an efficient hierarchy in the tDiscuss code - https://github.com/tsugitools/tdiscus.git
+
+Project Related Installs
+------------------------
+
+See the [Getting Started](PROJECT.md) documentation
 
