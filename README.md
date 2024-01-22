@@ -10,9 +10,10 @@ See the [Getting Started](INSTALL.md) documentation
 Design Notes
 ============
 
-We need to think through a hierarchy as shown in 1EdTech OneRoster.  At minimum,
-dj-lmp would want to consumer OneRoster - probably we should plan on producing
-it as well.
+As our first data model exercise, we need to think through a hierarchy as
+shown in 1EdTech OneRoster.  At minimum, dj-lmp would want to consume
+OneRoster - probably we should plan on producing it as well.  Once you have the
+data model, why not?
 
 https://www.imsglobal.org/activity/onerosterlis
 
@@ -28,3 +29,14 @@ https://community.d2l.com/brightspace/kb/articles/5399-about-org-unit-type-edito
 https://community.d2l.com/brightspace/kb/articles/4529-organizational-units-data-sets
 
 https://docs.valence.desire2learn.com/res/orgunit.html
+
+We need to build a hierarchical data model:
+
+https://stackoverflow.com/questions/192220/what-is-the-most-efficient-elegant-way-to-parse-a-flat-table-into-a-tree/192462#192462
+
+https://www.slideshare.net/billkarwin/models-for-hierarchical-data
+
+https://stackoverflow.com/questions/8252323/mysql-closure-table-hierarchical-database-how-to-pull-information-out-in-the-c
+
+Dr. Chuck built an efficient hierarchy in the tDiscuss code - https://github.com/tsugitools/tdiscus.git
+
