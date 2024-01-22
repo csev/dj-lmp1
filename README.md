@@ -22,9 +22,17 @@ When you come back in,
     cd dj-lmp1
     source .venv/bin/activate
 
+1EdTech Specifications
+======================
 
-Design Notes
-============
+https://www.1edtech.org/standards/lti
+
+https://www.imsglobal.org/activity/common-cartridge
+
+https://www.imsglobal.org/activity/onerosterlis
+
+Hierarchy Design Notes
+======================
 
 As our first data model exercise, we need to think through a hierarchy as
 shown in 1EdTech OneRoster.  At minimum, dj-lmp would want to consume
