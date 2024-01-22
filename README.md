@@ -1,3 +1,10 @@
+DJ-LMP1
+=======
+
+This is the pre-MVP repository for experimentation.  It is designed to serve as a scratch pad for ideas.
+There will be no releases and no organized branching / tag strategy.  It is a place to
+incubate and test dj-lmp ideas.
+
 Design Notes
 ============
 
