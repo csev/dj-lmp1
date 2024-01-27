@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Djlmp1Config(AppConfig):
+class DjlmpConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'djlmp1'
+    name = 'djlmp'
