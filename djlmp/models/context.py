@@ -26,3 +26,11 @@ class Context(BaseLTI):
     nrps_finish = models.DateTimeField(null=True)
     nrps_status = models.CharField(max_length=BaseLTI.LENGTH_TITLE, null=True)
     nrps_count = models.BigIntegerField(null=True)
+
+
+    def get_fields (self, request, obj=None, **kwargs):
+        fields = super().get_fields(request, obj, **kwargs)
+        print(fields)
+        fields.remove('parent')
+        fields.append('parent') #can also use insert
+        return fields

@@ -28,6 +28,9 @@ class BaseLTI(models.Model):
     login_at = models.DateTimeField(null=True)
     json = models.TextField(null=True)
 
+    def get_exclude_field_names():
+        return [f.name for f in BaseLTI._meta.fields]
+
     def save(self, *args, **kwargs):
         if not self.created_at:
             self.created_at = timezone.now()
