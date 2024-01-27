@@ -28,6 +28,7 @@ class BaseLTI(models.Model):
     login_at = models.DateTimeField(null=True)
     json = models.TextField(null=True)
 
+    # https://stackoverflow.com/a/77892185/1994792
     def get_exclude_field_names():
         return [f.name for f in BaseLTI._meta.fields]
 

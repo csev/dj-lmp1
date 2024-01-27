@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import BaseLTI, Tenant, Context, Subject, Link, LineItem, Membership, Score, ContextLog
 
+# https://stackoverflow.com/a/77892185/1994792
 class TenantAdmin(admin.ModelAdmin):
     exclude = BaseLTI.get_exclude_field_names();
 admin.site.register(Tenant, TenantAdmin)
