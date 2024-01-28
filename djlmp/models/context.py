@@ -9,8 +9,9 @@ class Context(BaseLaunchAble):
 
     tenant = models.ForeignKey(Tenant, on_delete=models.CASCADE)
     title = models.CharField(max_length=BaseSizes.LENGTH_TITLE, null=True)
-    description = models.TextField(max_length=BaseSizes.LENGTH_MEDIUMTEXT, null=True)
-    deployment_id = models.CharField(max_length=BaseSizes.LENGTH_EXTERNAL_ID, null=True)
+    description = models.TextField(max_length=BaseSizes.LENGTH_MEDIUMTEXT, null=True, blank=True)
+    # On Canvas deployment_id changes a lot - per course sometimes - is that correct?
+    deployment_id = models.CharField(max_length=BaseSizes.LENGTH_EXTERNAL_ID, null=True, blank=True)
     label = models.CharField(max_length=BaseSizes.LENGTH_TITLE, null=True, blank=True)
     line_items = models.CharField(max_length=BaseSizes.LENGTH_URI, null=True, blank=True)
     line_items_token = models.CharField(max_length=BaseSizes.LENGTH_URI, null=True, blank=True)

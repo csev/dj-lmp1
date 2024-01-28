@@ -7,8 +7,12 @@ class DjlmpConfig(AppConfig):
 
     # This causes a warning: avoid executing queries in AppConfig.ready()
     # Later we will find a better way to fix this
+    # Try is so migrations work :)
     def ready(self) :
-        from .models import ContextRole
-        for role in ContextRole.CONTEXT_ROLE_CHOICES:
-            c, created = ContextRole.objects.get_or_create(context_role=role)
-            if created : print(role)
+        try: 
+            from .models import ContextRole
+            for role in ContextRole.CONTEXT_ROLE_CHOICES:
+                c, created = ContextRole.objects.get_or_create(context_role=role)
+                if created : print(role)
+        except:
+            pass
