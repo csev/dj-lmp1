@@ -6,7 +6,7 @@ from .context import Context
 from .subject import Subject
 from .contextrole import ContextRole
 
-class Membership(BaseLTI):
+class ContextMembership(BaseLTI):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     context = models.ForeignKey(Context, on_delete=models.CASCADE)
 
