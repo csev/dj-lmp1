@@ -8,4 +8,5 @@ from .lineitem import LineItem
 from .membership import Membership
 from .score import Score
 from .contextlog import ContextLog
+from .contextrole import ContextRole
 

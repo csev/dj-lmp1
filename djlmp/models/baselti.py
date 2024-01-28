@@ -1,5 +1,6 @@
-from django.db import models
 import uuid
+from django.utils import timezone
+from django.db import models
 
 class BaseLTI(models.Model):
     LENGTH_GUID = 36

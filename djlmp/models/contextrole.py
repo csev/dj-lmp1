@@ -1,18 +1,11 @@
 import uuid
 from django.db import models
-from django.utils import timezone
-from .baselti import BaseLTI
-from .context import Context
-from .subject import Subject
-from .contextrole import ContextRole
-
-class Membership(BaseLTI):
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
-    context = models.ForeignKey(Context, on_delete=models.CASCADE)
 
 # https://www.imsglobal.org/spec/lti/v1p3/#lis-vocabulary-for-context-roles
 
 # https://docs.djangoproject.com/en/5.0/ref/models/fields/#choices
+
+class ContextRole(models.Model):
 
     ADMINISTRATOR = "http://purl.imsglobal.org/vocab/lis/v2/membership#Administrator"
     INSTRUCTOR = "http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor"
@@ -34,13 +27,12 @@ class Membership(BaseLTI):
         OFFICER: "Officer",
     }
 
-    context_role = models.ManyToManyField(ContextRole)
+    context_role = models.CharField(
+        max_length=100,
+        choices=CONTEXT_ROLE_CHOICES,
+        default=LEARNER,
+    )
 
-    def is_instructor(self):
-        return "instructor" in self.lti_roles.lower() or "instructor" in self.lti_roles_override.lower() if self.lti_roles else False
-
-    class Meta:
-        unique_together = [
-            ['subject', 'context'],
-        ]
+    def __str__(self):
+        return self.CONTEXT_ROLE_CHOICES[self.context_role];
 
