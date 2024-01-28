@@ -8,6 +8,5 @@ from .subject import Subject
 from .link import Link
 from .lineitem import LineItem
 from .score import Score
-from .contextrole import ContextRole
 from .contextmembership import ContextMembership
 

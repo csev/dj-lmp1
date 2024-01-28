@@ -4,7 +4,6 @@ from django.db import models
 from .basesizes import BaseSizes
 from .baselaunchable import BaseLaunchAble
 from .tenant import Tenant
-from .contextrole import ContextRole
 
 class Subject(BaseLaunchAble):
 

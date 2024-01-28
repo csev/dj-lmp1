@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from .models import Tenant
 from .models import Subject
-from .models import Context, ContextMembership, ContextRole
+from .models import Context, ContextMembership
 from .models import Link, LineItem, Score
 
 from .models import BaseLaunchAble
@@ -28,15 +28,11 @@ class LineItemAdmin(admin.ModelAdmin):
     exclude = BaseLaunchAble.get_exclude_field_names();
 admin.site.register(LineItem, LineItemAdmin)
 
-# https://stackoverflow.com/questions/42593994/django-group-permissions-like-field
 class ContextMembershipAdmin(admin.ModelAdmin):
     exclude = BaseLaunchAble.get_exclude_field_names();
-    filter_horizontal = ('context_role',)
 admin.site.register(ContextMembership, ContextMembershipAdmin)
 
 class ScoreAdmin(admin.ModelAdmin):
     exclude = BaseLaunchAble.get_exclude_field_names();
 admin.site.register(Score, ScoreAdmin)
-
-admin.site.register(ContextRole)
 
