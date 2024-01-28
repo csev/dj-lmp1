@@ -1,10 +1,10 @@
 from django.db import models
 from django.utils import timezone
 
-from .baselti import BaseLTI
+from .basedates import BaseDates
 from .subject import Subject
 
-class Score(BaseLTI):
+class Score(BaseDates):
     grade_book_column_id = models.PositiveIntegerField()
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     activity_progress = models.CharField(max_length=20, null=True, choices=[('Initialized', 'Initialized'), ('Started', 'Started'), ('InProgress', 'InProgress'), ('Submitted', 'Submitted'), ('Completed', 'Completed')])

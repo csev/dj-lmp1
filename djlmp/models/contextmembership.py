@@ -1,12 +1,12 @@
 import uuid
 from django.db import models
 from django.utils import timezone
-from .baselti import BaseLTI
+from .basedates import BaseDates
 from .context import Context
 from .subject import Subject
 from .contextrole import ContextRole
 
-class ContextMembership(BaseLTI):
+class ContextMembership(BaseDates):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     context = models.ForeignKey(Context, on_delete=models.CASCADE)
 
