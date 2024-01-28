@@ -31,6 +31,7 @@ class ContextRole(models.Model):
         max_length=100,
         choices=CONTEXT_ROLE_CHOICES,
         default=LEARNER,
+        unique=True,
     )
 
     def __str__(self):
