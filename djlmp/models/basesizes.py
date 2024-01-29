@@ -7,4 +7,5 @@ class BaseSizes():
     LENGTH_SMALL_TEXT = 200
     LENGTH_MEDIUMTEXT = 4000  # Less than 4096 because Oracle
     LENGTH_SAKAI_ID = 99  # TODO: Fix these
+    LENGTH_PKI_KEY = 4000  
 

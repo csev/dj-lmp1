@@ -14,3 +14,5 @@ from .lineitem import LineItem
 from .score import Score
 from .contextmembership import ContextMembership
 
+from .keyset import KeySet
+
