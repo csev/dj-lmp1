@@ -22,6 +22,27 @@ When you come back in,
     cd dj-lmp1
     source .venv/bin/activate
 
+Quick Start
+-----------
+
+You can start and run the application as follows
+
+    cd dj-lmp1
+    source .venv/bin/activate
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py createsuperuser
+    python manage.py runserver
+    
+Navigate to http://127.0.0.1:8000/admin  and log in.
+
+To reset the database:
+
+    rm db.sqlite3
+    rm */migrations/0*
+    python manage.py makemigrations
+    ...
+    
 1EdTech Specifications
 ======================
 
