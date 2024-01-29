@@ -12,7 +12,7 @@ class BaseDates(models.Model):
 
     # https://stackoverflow.com/a/77892185/1994792
     def get_excluded_field_names():
-        return [f.name for f in BaseLTI._meta.fields]
+        return [f.name for f in BaseDates._meta.fields]
 
     def save(self, *args, **kwargs):
         if not self.created_at:

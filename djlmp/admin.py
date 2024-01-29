@@ -1,11 +1,22 @@
 from django.contrib import admin
 
+from .models import Org, School
+
 from .models import Tenant
 from .models import Subject
 from .models import Context, ContextMembership
 from .models import Link, LineItem, Score
 
+from .models import BaseDates
 from .models import BaseLaunchAble
+
+class OrgAdmin(admin.ModelAdmin):
+    exclude = BaseDates.get_excluded_field_names();
+admin.site.register(Org, OrgAdmin)
+
+class SchoolAdmin(admin.ModelAdmin):
+    exclude = BaseDates.get_excluded_field_names();
+admin.site.register(School, SchoolAdmin)
 
 # https://stackoverflow.com/a/77892185/1994792
 class TenantAdmin(admin.ModelAdmin):
