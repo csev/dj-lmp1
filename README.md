@@ -66,6 +66,16 @@ This overlaps with LTI in a lot of areas - in particular in Roles:
 
 https://www.imsglobal.org/spec/lti/v1p3/#standardvocabs
 
+An excellent LTI 1.3 library from which much inspiration and code will be taken.
+
+https://github.com/dmitry-viskov/pylti1.3/blob/master/pylti1p3/registration.py
+
+Crypto library (depends on cryptography):
+
+https://github.com/latchset/jwcrypto/
+https://jwcrypto.readthedocs.io/en/latest/
+https://github.com/pyca/cryptography
+
 The LMS that is best at Hierachy is D2L.  D2L was influential in the creation
 of OneRoster.
 
