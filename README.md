@@ -68,7 +68,7 @@ https://www.imsglobal.org/spec/lti/v1p3/#standardvocabs
 
 An excellent LTI 1.3 library from which much inspiration and code will be taken.
 
-https://github.com/dmitry-viskov/pylti1.3/blob/master/pylti1p3/registration.py
+https://github.com/dmitry-viskov/pylti1.3/
 
 Crypto library (depends on cryptography):
 
